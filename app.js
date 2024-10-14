@@ -12,20 +12,28 @@ function vypocetohmovazakona() {
 
 
     if (!isNaN(U) && !isNaN(I)) {
+        if (I === 0) {
+            document.getElementById('chyba').innerHTML = "Nelze dělit nulou.";
+        } else {
 
         R = U / I;
 
         result = "Odpor (R) = " + R.toFixed(2) + " Ω";
 
         document.getElementById('odpor').value = R.toFixed(2);
+    }
 
     } else if (!isNaN(U) && !isNaN(R)) {
+        if (R === 0) {
+            document.getElementById('chyba').innerHTML = "Nelze dělit nulou.";
+        } else {
 
         I = U / R;
 
         result = "Proud (I) = " + I.toFixed(2) + " A";
 
         document.getElementById('proud').value = I.toFixed(2);
+        }
 
     } else if (!isNaN(I) && !isNaN(R)) {
 
@@ -37,8 +45,6 @@ function vypocetohmovazakona() {
 
     } else {
 
-        document.getElementById('chyba').innerHTML = "bhcdzsudhbsahbjdas";
-        console.log("jsme tady ?");
-
+        document.getElementById('chyba').innerHTML = "Prosím zadejte dvě hodnoty pro výpočet.";
     }
 }
