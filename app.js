@@ -8,6 +8,8 @@ function vypocetohmovazakona() {
 
     let result = "";
 
+    let error = "";
+
 
     if (!isNaN(U) && !isNaN(I)) {
 
@@ -35,11 +37,8 @@ function vypocetohmovazakona() {
 
     } else {
 
-        result = "Prosím zadejte dvě hodnoty pro výpočet.";
+        document.getElementById('chyba').innerHTML = "bhcdzsudhbsahbjdas";
+        console.log("jsme tady ?");
 
     }
-
-
-    document.getElementById('result').innerHTML = result;
-
 }
