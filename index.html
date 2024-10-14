@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulačka Ohmova zákona</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Kalkulačka Ohmova zákona</h1>
+    
+    <form id="ohmuv-zakon">
+        <label for="napeti">Napětí (U) [V]:</label>
+        <input type="number" id="napeti" step="any"><br><br>
+
+        <label for="proud">Proud (I) [A]:</label>
+        <input type="number" id="proud" step="any"><br><br>
+
+        <label for="odpor">Odpor (R) [Ω]:</label>
+        <input type="number" id="odpor" step="any"><br><br>
+
+        <button type="button" onclick="vypocetohmovazakona()">Vypočítat</button>
+    </form>
+</body>
+</html>
